@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Médico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: rgb(6, 6, 6);
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Consultorio Médico</h1>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Pacientes</a>
+    <a href="#">Consultas</a>
+    <a href="#">Historias Clínicas</a>
+    <a href="#">Administrar Usuarios</a>
+    <a href="#">Reportes</a>
+</nav>
+
+<div class="container">
+
+    <div class="section" id="registro-paciente">
+        <h2>Registro de Paciente</h2>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre del Paciente">
+        </div>
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" placeholder="Cédula del Paciente">
+        </div>
+        <div class="form-group">
+            <label for="eps">EPS:</label>
+            <input type="text" id="eps" placeholder="EPS del Paciente">
+        </div>
+        <div class="form-group">
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento">
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" placeholder="Dirección del Paciente">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="Teléfono del Paciente">
+        </div>
+        <button>Registrar Paciente</button>
+    </div>
+
+    <div class="section" id="consultas-medicas">
+        <h2>Registrar Consulta Médica</h2>
+        <div class="form-group">
+            <label for="diagnostico">Diagnóstico:</label>
+            <input type="text" id="diagnostico" placeholder="Diagnóstico">
+        </div>
+        <div class="form-group">
+            <label for="tratamiento">Tratamiento:</label>
+            <input type="text" id="tratamiento" placeholder="Tratamiento">
+        </div>
+        <div class="form-group">
+            <label for="fecha-consulta">Fecha de Consulta:</label>
+            <input type="date" id="fecha-consulta">
+        </div>
+        <button>Registrar Consulta Médica</button>
+    </div>
+
+    <div class="section" id="historias-clinicas">
+        <h2>Consultar Historia Clínica</h2>
+        <div class="form-group">
+            <label for="buscar-paciente">Buscar por Paciente:</label>
+            <input type="text" id="buscar-paciente" placeholder="Nombre del Paciente">
+            <button>Buscar</button>
+        </div>
+        <h3>Detalles de Historia Clínica</h3>
+        <p>ID Historia: <span id="id-historia">123</span></p>
+        <p>Fecha de Creación: <span id="fecha-creacion">01/01/2025</span></p>
+        <p>Diagnóstico: <span id="diagnostico-historia">Gripe</span></p>
+        <p>Tratamiento: <span id="tratamiento-historia">Reposo</span></p>
+    </div>
+
+    <div class="section" id="administracion">
+        <h2>Administrar Usuarios</h2>
+        <div class="form-group">
+            <label for="nombre-usuario">Nombre:</label>
+            <input type="text" id="nombre-usuario" placeholder="Nombre del Usuario">
+        </div>
+        <div class="form-group">
+            <label for="id-usuario">ID Usuario:</label>
+            <input type="text" id="id-usuario" placeholder="ID del Usuario">
+        </div>
+        <div class="form-group">
+            <label for="rol">Rol:</label>
+            <select id="rol">
+                <option value="recepcionista">Recepcionista</option>
+                <option value="medico">Médico</option>
+                <option value="administrador">Administrador</option>
+            </select>
+        </div>
+        <button>Añadir Usuario</button>
+    </div>
+
+</div>
+
+</body>
+</html>
